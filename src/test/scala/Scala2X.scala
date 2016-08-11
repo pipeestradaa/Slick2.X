@@ -62,7 +62,7 @@ class Scala2X extends FunSuite{
     Thread.sleep(2000)
   }
 
-  test("DELETE FROM PERSONAS WHERE ID = 1"){
+  test("DELETE FROM PERSONAS WHERE ID = 2"){
     db.withSession { implicit session =>
       //iniciamos el objeto
       personas.ddl.create
@@ -70,7 +70,7 @@ class Scala2X extends FunSuite{
       personas += Persona(2, "Felipe")
 
       //Construimos la condicion del delete
-      val deletePersona = personas.filter(_.id === 1)
+      val deletePersona = personas.filter(_.id === 2)
       //Ejecutamos el delete
       deletePersona.delete
 
@@ -79,6 +79,6 @@ class Scala2X extends FunSuite{
         println("[ID]: " + p.id + "\t [NAME]: " + p.name)
       }
     }
-    Thread.sleep(3000)
+    Thread.sleep(3500)
   }
 }
