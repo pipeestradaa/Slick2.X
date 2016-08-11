@@ -79,6 +79,6 @@ class Scala2X extends FunSuite{
         println("[ID]: " + p.id + "\t [NAME]: " + p.name)
       }
     }
-    Thread.sleep(2000)
+    Thread.sleep(3000)
   }
 }
